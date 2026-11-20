@@ -1,0 +1,150 @@
+/* ==========================================================================
+   PLANTILLAS Y PÁGINAS: Layout General, Estructura de Secciones y Responsive
+   ========================================================================== */
+
+/* Layout Principal de la Aplicación */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--topbar-height));
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Bloques de Sección Comunes */
+.section-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.section-block:last-of-type {
+  border-bottom: none;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.section-subtitle {
+  font-family: var(--font-subheading);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
+
+/* ==========================================================================
+   Vista Escritorio (>= 960px): Sidebar Lateral Fija y Reorganización
+   ========================================================================== */
+
+@media (min-width: 960px) {
+  section[id] {
+    scroll-margin-top: calc(var(--topbar-height) + 1.5rem);
+  }
+
+  .app-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .sidebar-nav {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+    height: calc(100vh - var(--topbar-height));
+    position: sticky;
+    top: var(--topbar-height);
+    padding: var(--space-lg) var(--space-sm);
+    overflow-y: auto;
+  }
+
+  .sidebar-nav__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .sidebar-profile {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
+  }
+
+  .sidebar-profile__avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .sidebar-profile__name {
+    font-size: 0.9rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    gap: var(--space-md);
+  }
+
+  .nav-menu__item {
+    width: 100%;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-sm) var(--space-xs);
+    gap: 0.35rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-link__icon-box {
+    width: 4.25rem;
+    height: 3.5rem;
+    border-radius: var(--radius-md);
+  }
+
+  .nav-link__icon-box svg,
+  .nav-link__icon-box img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .main-content {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}
+

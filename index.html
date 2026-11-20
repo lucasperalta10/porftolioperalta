@@ -5,25 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio personal de Lucas Peralta, Desarrollador de Software.">
-    <title>Lucas Peralta Site — Portfolio Personal</title>
-
-    <!-- Tipografías del Sistema Visual (Orbitron, Rajdhani, Inter) con fallback de sistema -->
+    <title>Lucas Peralta Site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700&family=Rajdhani:wght@600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Hojas de estilo locales -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- Enlace de accesibilidad para saltar al contenido principal con teclado -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-
-    <!-- Barra superior estilo Ventana de Software ("Lucas Peralta Site") -->
     <header class="window-topbar" role="banner">
         <div class="window-topbar__left">
             <span class="window-topbar__app-icon" aria-hidden="true">&gt;_</span>
@@ -44,24 +37,21 @@
                     <span aria-hidden="true">&#9633;</span>
                 </button>
                 <button type="button" id="btn-win-close" class="window-control-btn window-control-btn--close"
-                    title="Volver al inicio" aria-label="Volver al inicio y restaurar vista">
+                    title="Abrir consola del sistema" aria-label="Cerrar ventana y abrir consola del sistema">
                     <span aria-hidden="true">&#10005;</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Aviso de ventana minimizada (oculto por defecto) -->
     <div id="minimized-banner" class="minimized-banner" hidden>
         <p>Ventana <strong>Lucas Peralta Site</strong> minimizada en segundo plano.</p>
         <button type="button" id="btn-win-restore" class="btn btn--primary btn--sm">Restaurar ventana</button>
     </div>
 
     <div class="app-layout">
-        <!-- Navegación Lateral (Escritorio) / Superior Compacta (Móvil) -->
         <aside class="sidebar-nav" aria-label="Navegación principal del portfolio">
             <div class="sidebar-nav__inner">
-                <!-- Identidad / Avatar superior como en el sidebar de Figma -->
                 <a href="#inicio" class="sidebar-profile" aria-label="Ir al inicio - Lucas Peralta">
                     <span class="sidebar-profile__avatar">
                         <img src="assets/icons/WhatsApp%20Image%202026-11-20%20at%2013.54.47.jpeg"
@@ -69,8 +59,6 @@
                     </span>
                     <span class="sidebar-profile__name">Lucas Peralta</span>
                 </a>
-
-                <!-- Botón de menú compacto para móvil -->
                 <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
                     <svg class="nav-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         aria-hidden="true">
@@ -81,7 +69,6 @@
                     <span>Menú</span>
                 </button>
 
-                <!-- Lista de navegación semántica hacia todas las secciones -->
                 <nav aria-label="Secciones del sitio">
                     <ul id="nav-menu" class="nav-menu">
                         <li class="nav-menu__item">
@@ -95,7 +82,6 @@
                         <li class="nav-menu__item">
                             <a href="#sobre-mi" class="nav-link">
                                 <span class="nav-link__icon-box" aria-hidden="true">
-                                    <!-- Recuadro gris/icono de perfil como en el prototipo de Figma -->
                                     <svg viewBox="0 0 48 48" fill="none">
                                         <rect x="6" y="6" width="36" height="36" rx="6" fill="#71717A" />
                                         <circle cx="24" cy="19" r="6" fill="#E4E4E7" />
@@ -292,6 +278,10 @@
                         </div>
                     </article>
                 </div>
+
+                <div class="section-cta">
+                    <a href="proyectos.html" class="btn btn--outline">Ver todos mis proyectos</a>
+                </div>
             </section>
 
             <!-- ====================================================================
@@ -343,10 +333,9 @@
                     <p class="about-profile__bio">
                         Hola, mi nombre es Lucas Peralta y soy Desarrollador de Software.
                         Tengo 20 años y me gustan mucho los videojuegos y lo que tenga que ver con tecnología.
-                        soy de Castelli, Buenos Aires.
+                        soy de Castelli, Buenos Aires viví toda mi vida ahí, mis juegos favoritos son, Red Dead Redemption 2, Grand Theft Auto Vice City y Alien Insolation
                     </p>
 
-                    <!-- Icono de GitHub centrado como en la vista Sobre Mí de Figma -->
                     <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer"
                         class="about-profile__social"
                         aria-label="Visitar perfil de GitHub de Lucas Peralta (se abre en una nueva pestaña)">
@@ -357,7 +346,7 @@
             </section>
 
             <!-- ====================================================================
-           5. SECCIÓN CONOCIMIENTOS (Categorizados con niveles confirmados)
+           5. SECCIÓN CONOCIMIENTOS
            ==================================================================== -->
             <section id="conocimientos" class="section-block" aria-labelledby="titulo-conocimientos">
                 <div class="section-header">
@@ -710,8 +699,33 @@
         </div>
     </div>
 
+    <!-- Consola / Terminal del Sistema -->
+    <div id="system-terminal" class="terminal-overlay" role="dialog" aria-modal="true"
+        aria-labelledby="terminal-title" hidden>
+        <div class="terminal-window">
+            <div class="terminal-window__header">
+                <div class="terminal-window__title-group">
+                    <span class="terminal-window__badge" aria-hidden="true">&gt;_</span>
+                    <span id="terminal-title" class="terminal-window__title">terminal.exe — lucas@portfolio</span>
+                </div>
+                <button type="button" id="btn-terminal-exit" class="btn btn--outline btn--sm">
+                    Volver a portfolio.exe
+                </button>
+            </div>
+            <div id="terminal-body" class="terminal-window__body">
+                <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+                <form id="terminal-form" class="terminal-input-row" autocomplete="off">
+                    <label for="terminal-input" class="terminal-prompt-label">lucas@portfolio:~$</label>
+                    <input type="text" id="terminal-input" class="terminal-input" spellcheck="false"
+                        aria-label="Ingresar comando en la consola">
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Script principal -->
     <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
 </body>
 
 </html>

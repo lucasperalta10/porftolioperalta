@@ -1,0 +1,89 @@
+/* ==========================================================================
+   ÁTOMOS: Base, Accesibilidad y Elementos Primitivos
+   ========================================================================== */
+
+body {
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizada estilo software oscuro */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Desplazamiento con margen para que los títulos nunca queden ocultos bajo barras fijas */
+section[id] {
+  scroll-margin-top: calc(var(--topbar-height) + var(--mobile-nav-height) + 1rem);
+}
+
+/* Foco visible de alto contraste para navegación por teclado */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Enlace de salto directo al contenido principal */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 1000;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: var(--font-subheading);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Animaciones discretas de aparición */
+.reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 320ms ease-out, transform 320ms ease-out;
+}
+
+.js-enabled .reveal-item.is-hidden {
+  opacity: 0;
+  transform: translateY(14px);
+}
+

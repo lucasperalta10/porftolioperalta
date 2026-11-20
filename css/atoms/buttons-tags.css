@@ -1,0 +1,155 @@
+/* ==========================================================================
+   ÁTOMOS: Botones, Tags, Badges y Campos de Formulario
+   ========================================================================== */
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-subheading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn--outline {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+}
+
+/* Badges y Tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tech-tag {
+  font-family: var(--font-subheading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  border: 1px solid var(--color-border-strong);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+.project-link-tag {
+  font-family: var(--font-subheading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(139, 92, 246, 0.14);
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-border);
+}
+
+.pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.55rem;
+  font-family: var(--font-subheading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+  border: 1px dashed rgba(251, 191, 36, 0.45);
+  border-radius: var(--radius-full);
+}
+
+/* Controles de Entrada (Inputs / Textareas) */
+.form-control {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control::placeholder {
+  color: rgba(167, 161, 181, 0.55);
+}
+
+.form-control:hover {
+  border-color: var(--color-primary);
+}
+
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  outline: none;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+textarea.form-control {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.form-label {
+  font-family: var(--font-subheading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-label__optional {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.form-error {
+  font-size: 0.82rem;
+  color: var(--color-error);
+  min-height: 1.15rem;
+}
+

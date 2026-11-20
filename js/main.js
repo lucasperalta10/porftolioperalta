@@ -67,15 +67,20 @@
             if (statusActiveView) {
               statusActiveView.textContent = 'VIEW: #' + activeId;
             }
-            navLinks.forEach(function (link) {
-              const isMatch = link.getAttribute('href') === '#' + activeId;
-              link.classList.toggle('is-active', isMatch);
-              if (isMatch) {
-                link.setAttribute('aria-current', 'true');
-              } else {
-                link.removeAttribute('aria-current');
-              }
+            const hasMatchingNavLink = Array.from(navLinks).some(function (link) {
+              return link.getAttribute('href') === '#' + activeId;
             });
+            if (hasMatchingNavLink) {
+              navLinks.forEach(function (link) {
+                const isMatch = link.getAttribute('href') === '#' + activeId;
+                link.classList.toggle('is-active', isMatch);
+                if (isMatch) {
+                  link.setAttribute('aria-current', 'true');
+                } else {
+                  link.removeAttribute('aria-current');
+                }
+              });
+            }
           }
         });
       },
@@ -140,17 +145,6 @@
     btnMaximize.addEventListener('click', function () {
       const isMaximized = document.body.classList.toggle('is-window-maximized');
       btnMaximize.setAttribute('aria-pressed', String(isMaximized));
-    });
-  }
-
-  if (btnClose) {
-    btnClose.addEventListener('click', function () {
-      setWindowMinimized(false);
-      document.body.classList.remove('is-window-maximized');
-      if (btnMaximize) {
-        btnMaximize.setAttribute('aria-pressed', 'false');
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 

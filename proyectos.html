@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catálogo completo de proyectos de Lucas Peralta: explicación detallada, tecnologías utilizadas y problemas que resuelve.">
+    <title>Todos mis Proyectos — Lucas Peralta Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700&family=Rajdhani:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <header class="window-topbar" role="banner">
+        <div class="window-topbar__left">
+            <span class="window-topbar__app-icon" aria-hidden="true">&gt;_</span>
+            <span class="window-topbar__app-name">portfolio.exe</span>
+        </div>
+
+        <span class="window-topbar__title">Lucas Peralta Site — proyectos.html</span>
+
+        <div class="window-topbar__right">
+            <span id="system-clock" class="window-topbar__clock" aria-label="Hora local">--:--</span>
+            <div class="window-controls" role="group" aria-label="Controles de ventana">
+                <button type="button" id="btn-win-minimize" class="window-control-btn" title="Minimizar ventana"
+                    aria-label="Minimizar ventana" aria-pressed="false">
+                    <span aria-hidden="true">&#8212;</span>
+                </button>
+                <button type="button" id="btn-win-maximize" class="window-control-btn" title="Alternar ancho completo"
+                    aria-label="Alternar ancho completo" aria-pressed="false">
+                    <span aria-hidden="true">&#9633;</span>
+                </button>
+                <button type="button" id="btn-win-close" class="window-control-btn window-control-btn--close"
+                    title="Abrir consola del sistema" aria-label="Cerrar ventana y abrir consola del sistema">
+                    <span aria-hidden="true">&#10005;</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="minimized-banner" class="minimized-banner" hidden>
+        <p>Ventana <strong>Lucas Peralta Site</strong> minimizada en segundo plano.</p>
+        <button type="button" id="btn-win-restore" class="btn btn--primary btn--sm">Restaurar ventana</button>
+    </div>
+
+    <div class="app-layout">
+        <aside class="sidebar-nav" aria-label="Navegación principal del portfolio">
+            <div class="sidebar-nav__inner">
+                <a href="index.html#inicio" class="sidebar-profile" aria-label="Ir al inicio - Lucas Peralta">
+                    <span class="sidebar-profile__avatar">
+                        <img src="assets/icons/WhatsApp%20Image%202026-11-20%20at%2013.54.47.jpeg"
+                            alt="Fotografía de perfil de Lucas Peralta" width="72" height="72">
+                    </span>
+                    <span class="sidebar-profile__name">Lucas Peralta</span>
+                </a>
+                <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                    <svg class="nav-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <span>Menú</span>
+                </button>
+
+                <nav aria-label="Secciones del sitio">
+                    <ul id="nav-menu" class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a href="proyectos.html" class="nav-link is-active" aria-current="page">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <img src="assets/icons/images%20(1).jpg" alt="" width="40" height="40">
+                                </span>
+                                <span>Proyectos</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="index.html#sobre-mi" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <rect x="6" y="6" width="36" height="36" rx="6" fill="#71717A" />
+                                        <circle cx="24" cy="19" r="6" fill="#E4E4E7" />
+                                        <path d="M13 36C13 30.4772 17.9249 26 24 26C30.0751 26 35 30.4772 35 36"
+                                            stroke="#E4E4E7" stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                                <span>Sobre Mí</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="index.html#conocimientos" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#39FF88" stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </span>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="index.html#educacion" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
+                                </span>
+                                <span>Educación</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="index.html#contacto" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#39FF88" stroke-width="2">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </span>
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main id="contenido-principal" class="main-content">
+
+            <section id="todos-proyectos" class="section-block" aria-labelledby="titulo-todos-proyectos">
+                <div class="page-back-bar reveal-item">
+                    <a href="index.html#proyectos" class="btn btn--outline btn--sm">
+                        &#8592; Volver a Proyectos Destacados
+                    </a>
+                </div>
+
+                <div class="section-header">
+                    <h1 id="titulo-todos-proyectos" class="section-title">Todos mis Proyectos</h1>
+                    <p class="section-subtitle">
+                        Explicación detallada de cada desarrollo: qué problema resuelve, su enfoque y las tecnologías
+                        utilizadas.
+                    </p>
+                </div>
+
+                <div class="projects-detail-list">
+
+                    <!-- Proyecto 1: ControlAR -->
+                    <article class="project-detail-card reveal-item">
+                        <div class="project-detail-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20201051.png"
+                                alt="Captura de pantalla del sistema ControlAR" width="480" height="300">
+                            <span class="project-card__logo-badge" title="Logo oficial de ControlAR">
+                                <img src="assets/icons/ControlARimagen.png" alt="Logo de ControlAR" width="38"
+                                    height="38">
+                            </span>
+                        </div>
+
+                        <div class="project-detail-card__content">
+                            <div class="project-detail-card__header">
+                                <span class="project-detail-card__category">Sistema de Gestión</span>
+                                <h2 class="project-detail-card__title">ControlAR</h2>
+                            </div>
+
+                            <p class="project-detail-card__summary">
+                                Sistema de gestión de stock e inventario diseñado para negocios pequeños, pensado para
+                                agilizar el control diario de mercadería y la atención en mostrador.
+                            </p>
+
+                            <div class="project-detail-card__blocks">
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Problema que resuelve</h3>
+                                    <p class="project-detail-block__text">
+                                        Reemplaza el control manual en papel o planillas dispersas, centralizando el
+                                        registro de productos, la consulta rápida de precios en mostrador y las alertas
+                                        de reposición cuando el stock es bajo.
+                                    </p>
+                                </div>
+
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Tecnologías utilizadas</h3>
+                                    <ul class="tech-tags" aria-label="Tecnologías de ControlAR">
+                                        <li class="tech-tag">HTML5</li>
+                                        <li class="tech-tag">CSS3</li>
+                                        <li class="tech-tag">JavaScript</li>
+                                        <li class="tech-tag">Base de Datos / SQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-card__actions">
+                                <a href="https://github.com/lucasperalta10/ControlARsistema" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                                    Ver Repositorio en GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2: NightWatch -->
+                    <article class="project-detail-card reveal-item">
+                        <div class="project-detail-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20204404.png"
+                                alt="Captura de pantalla del videojuego NightWatch" width="480" height="300">
+                        </div>
+
+                        <div class="project-detail-card__content">
+                            <div class="project-detail-card__header">
+                                <span class="project-detail-card__category">Videojuego</span>
+                                <h2 class="project-detail-card__title">NightWatch</h2>
+                            </div>
+
+                            <p class="project-detail-card__summary">
+                                Videojuego de terror y supervivencia inspirado en <em>Five Nights at Freddy's</em>,
+                                centrado en la tensión ambiental, la vigilancia y la gestión de recursos durante la
+                                noche.
+                            </p>
+
+                            <div class="project-detail-card__blocks">
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Problema / Desafío que aborda</h3>
+                                    <p class="project-detail-block__text">
+                                        Ofrecer una experiencia de terror interactiva con mecánicas de monitoreo en
+                                        tiempo real, manejo de estados del juego, eventos temporizados y respuesta visual
+                                        y sonora para mantener la inmersión del jugador.
+                                    </p>
+                                </div>
+
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Tecnologías utilizadas</h3>
+                                    <ul class="tech-tags" aria-label="Tecnologías de NightWatch">
+                                        <li class="tech-tag">Python</li>
+                                        <li class="tech-tag">Lógica de Videojuegos</li>
+                                        <li class="tech-tag">Git / GitHub</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-card__actions">
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--primary btn--sm">
+                                    Ver en GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3: GPUflow -->
+                    <article class="project-detail-card reveal-item">
+                        <div class="project-detail-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20203819.png"
+                                alt="Captura de pantalla del sistema GPUflow" width="480" height="300">
+                        </div>
+
+                        <div class="project-detail-card__content">
+                            <div class="project-detail-card__header">
+                                <span class="project-detail-card__category">Sistema de Gestión</span>
+                                <h2 class="project-detail-card__title">GPUflow</h2>
+                            </div>
+
+                            <p class="project-detail-card__summary">
+                                Sistema especializado en la administración y seguimiento de stock para placas de video
+                                (GPUs) de PC, orientado a comercios y distribuidores de hardware.
+                            </p>
+
+                            <div class="project-detail-card__blocks">
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Problema que resuelve</h3>
+                                    <p class="project-detail-block__text">
+                                        Ordena el inventario de componentes de alto valor, permitiendo administrar
+                                        modelos disponibles, proveedores y alertas tempranas cuando quedan pocas
+                                        unidades en tiempo real.
+                                    </p>
+                                </div>
+
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Tecnologías utilizadas</h3>
+                                    <ul class="tech-tags" aria-label="Tecnologías de GPUflow">
+                                        <li class="tech-tag">HTML5</li>
+                                        <li class="tech-tag">CSS3</li>
+                                        <li class="tech-tag">JavaScript</li>
+                                        <li class="tech-tag">MySQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-card__actions">
+                                <a href="https://github.com/lucasperalta10/GPUflowRenovado" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                                    Ver Repositorio en GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4: GamerFest -->
+                    <article class="project-detail-card reveal-item">
+                        <div class="project-detail-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20205511.png"
+                                alt="Captura de pantalla de la plataforma GamerFest" width="480" height="300">
+                        </div>
+
+                        <div class="project-detail-card__content">
+                            <div class="project-detail-card__header">
+                                <span class="project-detail-card__category">Plataforma Web</span>
+                                <h2 class="project-detail-card__title">GamerFest</h2>
+                            </div>
+
+                            <p class="project-detail-card__summary">
+                                Plataforma web interactiva creada para reunir novedades, eventos y espacios de encuentro
+                                pensados para la comunidad gamer.
+                            </p>
+
+                            <div class="project-detail-card__blocks">
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Problema que resuelve</h3>
+                                    <p class="project-detail-block__text">
+                                        Centraliza información de eventos, actividades y contenido para jugadores en una
+                                        interfaz visual clara, moderna y accesible desde distintos dispositivos.
+                                    </p>
+                                </div>
+
+                                <div class="project-detail-block">
+                                    <h3 class="project-detail-block__heading">Tecnologías utilizadas</h3>
+                                    <ul class="tech-tags" aria-label="Tecnologías de GamerFest">
+                                        <li class="tech-tag">HTML5</li>
+                                        <li class="tech-tag">CSS3</li>
+                                        <li class="tech-tag">JavaScript</li>
+                                        <li class="tech-tag">Diseño Responsivo</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-card__actions">
+                                <a href="https://github.com/lucasperalta10/GamerFest" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                                    Ver Repositorio en GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-cta">
+                    <a href="index.html#proyectos" class="btn btn--outline">Volver a Proyectos Destacados</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p><strong>Lucas Peralta</strong> — Desarrollador de Software</p>
+        </div>
+    </footer>
+
+    <!-- Barra de estado inferior estilo Software / IDE -->
+    <div class="status-bar" role="status" aria-label="Estado del sistema">
+        <div class="status-bar__left">
+            <span class="status-bar__item status-bar__item--online">
+                <span class="status-dot" aria-hidden="true"></span>
+                SYSTEM: ONLINE
+            </span>
+            <span class="status-bar__item status-bar__hide-xs">git: main</span>
+        </div>
+        <div class="status-bar__right">
+            <span id="status-active-view" class="status-bar__item">VIEW: #todos-proyectos</span>
+            <span class="status-bar__item status-bar__hide-xs">UTF-8</span>
+            <span class="status-bar__item">v1.0.0</span>
+        </div>
+    </div>
+
+    <!-- Consola / Terminal del Sistema -->
+    <div id="system-terminal" class="terminal-overlay" role="dialog" aria-modal="true"
+        aria-labelledby="terminal-title" hidden>
+        <div class="terminal-window">
+            <div class="terminal-window__header">
+                <div class="terminal-window__title-group">
+                    <span class="terminal-window__badge" aria-hidden="true">&gt;_</span>
+                    <span id="terminal-title" class="terminal-window__title">terminal.exe — lucas@portfolio</span>
+                </div>
+                <button type="button" id="btn-terminal-exit" class="btn btn--outline btn--sm">
+                    Volver a portfolio.exe
+                </button>
+            </div>
+            <div id="terminal-body" class="terminal-window__body">
+                <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+                <form id="terminal-form" class="terminal-input-row" autocomplete="off">
+                    <label for="terminal-input" class="terminal-prompt-label">lucas@portfolio:~$</label>
+                    <input type="text" id="terminal-input" class="terminal-input" spellcheck="false"
+                        aria-label="Ingresar comando en la consola">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+
+</html>
+
