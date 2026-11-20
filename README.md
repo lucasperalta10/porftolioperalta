@@ -56,7 +56,7 @@ Definido mediante variables CSS en `:root` (`css/styles.css`):
 ## 4. Decisiones de Diseño e Implementación (para Revisión)
 
 1. **Unificación en Single-Page con navegación por anclas (`#inicio`, `#proyectos`, `#resenas`, `#sobre-mi`, `#conocimientos`, `#educacion`, `#contacto`):**
-   - Las tres pantallas del prototipo (*Inicio*, *Proyectos* y *Sobre mí*) comparten la misma barra superior (`Lucas Peralta Site`) y la misma columna lateral izquierda con el avatar, carpeta de Proyectos, Sobre Mí y botón estilo Steam de Inicio.
+   - Las tres pantallas del prototipo (*Inicio*, *Proyectos* y *Sobre mí*) comparten la misma barra superior (`Lucas Peralta Site`) y la misma columna lateral izquierda con el avatar (que funciona como enlace directo a `#inicio`), carpeta de Proyectos y Sobre Mí.
    - Se integraron todas las vistas en una arquitectura fluida de una sola página con `scroll-margin-top` para que ningún título quede oculto bajo la cabecera al navegar.
 2. **Navegación móvil compacta y accesible:**
    - En la vista móvil del prototipo de Figma solo se mostraba el botón "Inicio" sin definir una navegación completa.
