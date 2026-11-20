@@ -53,9 +53,10 @@
   }
 
   /* ==========================================================================
-     2. Indicador de Sección Activa en la Navegación
+     2. Indicador de Sección Activa en la Navegación y Barra de Estado
      ========================================================================== */
   const sections = document.querySelectorAll('main section[id]');
+  const statusActiveView = document.getElementById('status-active-view');
 
   if ('IntersectionObserver' in window && sections.length > 0) {
     const sectionObserver = new IntersectionObserver(
@@ -63,6 +64,9 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             const activeId = entry.target.getAttribute('id');
+            if (statusActiveView) {
+              statusActiveView.textContent = 'VIEW: #' + activeId;
+            }
             navLinks.forEach(function (link) {
               const isMatch = link.getAttribute('href') === '#' + activeId;
               link.classList.toggle('is-active', isMatch);
@@ -83,6 +87,70 @@
 
     sections.forEach(function (section) {
       sectionObserver.observe(section);
+    });
+  }
+
+  /* ==========================================================================
+     2B. Controles de Ventana y Reloj del Sistema (Interfaz tipo Software)
+     ========================================================================== */
+  const systemClock = document.getElementById('system-clock');
+  const btnMinimize = document.getElementById('btn-win-minimize');
+  const btnMaximize = document.getElementById('btn-win-maximize');
+  const btnClose = document.getElementById('btn-win-close');
+  const btnRestore = document.getElementById('btn-win-restore');
+  const minimizedBanner = document.getElementById('minimized-banner');
+
+  function updateSystemClock() {
+    if (!systemClock) return;
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    systemClock.textContent = hours + ':' + minutes;
+  }
+
+  if (systemClock) {
+    updateSystemClock();
+    setInterval(updateSystemClock, 15000);
+  }
+
+  function setWindowMinimized(minimized) {
+    document.body.classList.toggle('is-window-minimized', minimized);
+    if (minimizedBanner) {
+      minimizedBanner.hidden = !minimized;
+    }
+    if (btnMinimize) {
+      btnMinimize.setAttribute('aria-pressed', String(minimized));
+    }
+  }
+
+  if (btnMinimize) {
+    btnMinimize.addEventListener('click', function () {
+      const isMinimized = document.body.classList.contains('is-window-minimized');
+      setWindowMinimized(!isMinimized);
+    });
+  }
+
+  if (btnRestore) {
+    btnRestore.addEventListener('click', function () {
+      setWindowMinimized(false);
+    });
+  }
+
+  if (btnMaximize) {
+    btnMaximize.addEventListener('click', function () {
+      const isMaximized = document.body.classList.toggle('is-window-maximized');
+      btnMaximize.setAttribute('aria-pressed', String(isMaximized));
+    });
+  }
+
+  if (btnClose) {
+    btnClose.addEventListener('click', function () {
+      setWindowMinimized(false);
+      document.body.classList.remove('is-window-maximized');
+      if (btnMaximize) {
+        btnMaximize.setAttribute('aria-pressed', 'false');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 

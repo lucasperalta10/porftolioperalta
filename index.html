@@ -23,10 +23,39 @@
     <!-- Enlace de accesibilidad para saltar al contenido principal con teclado -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Barra superior del prototipo ("Lucas Peralta Site") -->
+    <!-- Barra superior estilo Ventana de Software ("Lucas Peralta Site") -->
     <header class="window-topbar" role="banner">
+        <div class="window-topbar__left">
+            <span class="window-topbar__app-icon" aria-hidden="true">&gt;_</span>
+            <span class="window-topbar__app-name">portfolio.exe</span>
+        </div>
+
         <span class="window-topbar__title">Lucas Peralta Site</span>
+
+        <div class="window-topbar__right">
+            <span id="system-clock" class="window-topbar__clock" aria-label="Hora local">--:--</span>
+            <div class="window-controls" role="group" aria-label="Controles de ventana">
+                <button type="button" id="btn-win-minimize" class="window-control-btn" title="Minimizar ventana"
+                    aria-label="Minimizar ventana" aria-pressed="false">
+                    <span aria-hidden="true">&#8212;</span>
+                </button>
+                <button type="button" id="btn-win-maximize" class="window-control-btn" title="Alternar ancho completo"
+                    aria-label="Alternar ancho completo" aria-pressed="false">
+                    <span aria-hidden="true">&#9633;</span>
+                </button>
+                <button type="button" id="btn-win-close" class="window-control-btn window-control-btn--close"
+                    title="Volver al inicio" aria-label="Volver al inicio y restaurar vista">
+                    <span aria-hidden="true">&#10005;</span>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <!-- Aviso de ventana minimizada (oculto por defecto) -->
+    <div id="minimized-banner" class="minimized-banner" hidden>
+        <p>Ventana <strong>Lucas Peralta Site</strong> minimizada en segundo plano.</p>
+        <button type="button" id="btn-win-restore" class="btn btn--primary btn--sm">Restaurar ventana</button>
+    </div>
 
     <div class="app-layout">
         <!-- Navegación Lateral (Escritorio) / Superior Compacta (Móvil) -->
@@ -662,9 +691,24 @@
     <footer class="site-footer">
         <div class="site-footer__inner">
             <p><strong>Lucas Peralta</strong> — Desarrollador de Software</p>
-
         </div>
     </footer>
+
+    <!-- Barra de estado inferior estilo Software / IDE -->
+    <div class="status-bar" role="status" aria-label="Estado del sistema">
+        <div class="status-bar__left">
+            <span class="status-bar__item status-bar__item--online">
+                <span class="status-dot" aria-hidden="true"></span>
+                SYSTEM: ONLINE
+            </span>
+            <span class="status-bar__item status-bar__hide-xs">git: main</span>
+        </div>
+        <div class="status-bar__right">
+            <span id="status-active-view" class="status-bar__item">VIEW: #inicio</span>
+            <span class="status-bar__item status-bar__hide-xs">UTF-8</span>
+            <span class="status-bar__item">v1.0.0</span>
+        </div>
+    </div>
 
     <!-- Script principal -->
     <script src="js/main.js"></script>
