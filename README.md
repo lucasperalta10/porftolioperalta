@@ -92,9 +92,7 @@ Definido mediante variables CSS en `:root` (`css/styles.css`):
   - *Cursos:* Desarrollo Web Full Stack JR (Generación T, Streambe) e Inglés — Nivel B2 (SELT).
 - [x] **Reseñas:** Integradas para ControlAR y GPUflow.
 - [x] **Correo electrónico oficial y formulario de contacto (`mailto:`):** Configurado con `lucas.peraltaa25@gmail.com` tanto en **Canales Directos** como en el formulario (`data-recipient-email="lucas.peraltaa25@gmail.com"`).
-
-### Pendientes opcionales:
-- [ ] **Próximos Proyectos:** Completar títulos e imágenes a medida que se publiquen nuevos desarrollos.
+- [x] **Próximos Proyectos:** Subsección omitida de producción hasta contar con nuevos desarrollos definidos.
 
 ---
 
