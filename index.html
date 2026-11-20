@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de Lucas Peralta, Desarrollador de Software.">
+    <title>Lucas Peralta Site — Portfolio Personal</title>
+
+    <!-- Tipografías del Sistema Visual (Orbitron, Rajdhani, Inter) con fallback de sistema -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700&family=Rajdhani:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Hojas de estilo locales -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Enlace de accesibilidad para saltar al contenido principal con teclado -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Barra superior del prototipo ("Lucas Peralta Site") -->
+    <header class="window-topbar" role="banner">
+        <span class="window-topbar__title">Lucas Peralta Site</span>
+    </header>
+
+    <div class="app-layout">
+        <!-- Navegación Lateral (Escritorio) / Superior Compacta (Móvil) -->
+        <aside class="sidebar-nav" aria-label="Navegación principal del portfolio">
+            <div class="sidebar-nav__inner">
+                <!-- Identidad / Avatar superior como en el sidebar de Figma -->
+                <a href="#inicio" class="sidebar-profile" aria-label="Ir al inicio - Lucas Peralta">
+                    <span class="sidebar-profile__avatar">
+                        <img src="assets/icons/WhatsApp%20Image%202026-11-20%20at%2013.54.47.jpeg"
+                            alt="Fotografía de perfil de Lucas Peralta" width="72" height="72">
+                    </span>
+                    <span class="sidebar-profile__name">Lucas Peralta</span>
+                </a>
+
+                <!-- Botón de menú compacto para móvil -->
+                <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                    <svg class="nav-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <span>Menú</span>
+                </button>
+
+                <!-- Lista de navegación semántica hacia todas las secciones -->
+                <nav aria-label="Secciones del sitio">
+                    <ul id="nav-menu" class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a href="#proyectos" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <img src="assets/icons/images%20(1).jpg" alt="" width="40" height="40">
+                                </span>
+                                <span>Proyectos</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#sobre-mi" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <!-- Recuadro gris/icono de perfil como en el prototipo de Figma -->
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <rect x="6" y="6" width="36" height="36" rx="6" fill="#71717A" />
+                                        <circle cx="24" cy="19" r="6" fill="#E4E4E7" />
+                                        <path d="M13 36C13 30.4772 17.9249 26 24 26C30.0751 26 35 30.4772 35 36"
+                                            stroke="#E4E4E7" stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                                <span>Sobre Mí</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#inicio" class="nav-link is-active" aria-current="true">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <!-- Icono estilo gaming/Steam del botón Inicio en el prototipo -->
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <circle cx="24" cy="24" r="20" fill="#1E3A8A" />
+                                        <circle cx="30" cy="19" r="6.5" stroke="#EAE7F2" stroke-width="3" />
+                                        <circle cx="30" cy="19" r="2.5" fill="#EAE7F2" />
+                                        <circle cx="17" cy="30" r="4.5" stroke="#EAE7F2" stroke-width="2.5" />
+                                        <path d="M8 25L15 28.5M20 27L26 23" stroke="#EAE7F2" stroke-width="3.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#conocimientos" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#39FF88" stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </span>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#educacion" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
+                                </span>
+                                <span>Educación</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#contacto" class="nav-link">
+                                <span class="nav-link__icon-box" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#39FF88" stroke-width="2">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </span>
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main id="contenido-principal" class="main-content">
+
+            <!-- ====================================================================
+           1. SECCIÓN INICIO (Presentación + Resumen Conocimientos + Acceso a Proyectos)
+           ==================================================================== -->
+            <section id="inicio" class="section-block" aria-labelledby="titulo-inicio">
+                <div class="hero-card reveal-item">
+                    <span class="hero-card__eyebrow">Portfolio Personal</span>
+                    <h1 id="titulo-inicio" class="hero-card__title">Lucas Peralta</h1>
+                    <p class="hero-card__lead">
+                        Hola, mi nombre es Lucas Peralta y soy Desarrollador de Software.
+                        Tengo 20 años y me gustan mucho los videojuegos y lo que tenga que ver con tecnología.
+                    </p>
+
+
+                    <div class="hero-card__actions">
+                        <a href="#proyectos" class="btn btn--primary">Ver todos mis Proyectos</a>
+                        <a href="#contacto" class="btn btn--outline">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- Bloque "Mis Conocimientos" de la pantalla Inicio (JS, Python, HTML5, CSS3) -->
+                <div class="quick-skills reveal-item">
+                    <div class="section-header">
+                        <h2 class="section-title">Mis Conocimientos</h2>
+                        <p class="section-subtitle">Tecnologías principales destacadas en la portada del prototipo</p>
+                    </div>
+
+                    <ul class="quick-skills__grid" aria-label="Tecnologías principales en portada">
+                        <li class="quick-skill-tile">
+                            <img src="assets/icons/JavaScript-logo.png" alt="Logo de JavaScript"
+                                class="quick-skill-tile__icon" width="60" height="60">
+                            <span class="quick-skill-tile__name">JavaScript</span>
+                        </li>
+                        <li class="quick-skill-tile">
+                            <img src="assets/icons/images%20(1).png" alt="Logo de Python" class="quick-skill-tile__icon"
+                                width="60" height="60">
+                            <span class="quick-skill-tile__name">Python</span>
+                        </li>
+                        <li class="quick-skill-tile">
+                            <img src="assets/icons/images.png" alt="Logo de HTML5" class="quick-skill-tile__icon"
+                                width="60" height="60">
+                            <span class="quick-skill-tile__name">HTML5</span>
+                        </li>
+                        <li class="quick-skill-tile">
+                            <img src="assets/icons/CSS3_logo_and_wordmark.svg.webp" alt="Logo de CSS3"
+                                class="quick-skill-tile__icon" width="60" height="60">
+                            <span class="quick-skill-tile__name">CSS</span>
+                        </li>
+                    </ul>
+
+                    <div class="section-cta">
+                        <a href="#conocimientos" class="btn btn--outline btn--sm">Ver listado completo de
+                            conocimientos</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           2. SECCIÓN PROYECTOS (Proyectos Destacados + Próximos Proyectos)
+           ==================================================================== -->
+            <section id="proyectos" class="section-block" aria-labelledby="titulo-proyectos">
+                <div class="section-header">
+                    <h2 id="titulo-proyectos" class="section-title">Proyectos Destacados</h2>
+                    <p class="section-subtitle">
+                        Aplicaciones, sistemas de gestión y videojuegos desarrollados por Lucas Peralta.
+                    </p>
+                </div>
+
+                <!-- Grilla de 2 columnas tanto en móvil (393px) como en escritorio según prototipo -->
+                <div class="projects-grid">
+                    <!-- Tarjeta 1: ControlAR -->
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20201051.png"
+                                alt="Captura de pantalla del sistema ControlAR" width="320" height="200">
+                            <span class="project-card__logo-badge" title="Logo oficial de ControlAR">
+                                <img src="assets/icons/ControlARimagen.png" alt="Logo de ControlAR" width="38" height="38">
+                            </span>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">ControlAR</h3>
+                            <p class="project-card__desc">
+                                Sistema de gestión de stock para negocios pequeños.
+                            </p>
+                            <div class="project-card__links" aria-label="Enlaces del proyecto ControlAR">
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer" class="project-link-tag">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: NightWatch -->
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20204404.png"
+                                alt="Captura de pantalla del videojuego NightWatch" width="320" height="200">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">NightWatch</h3>
+                            <p class="project-card__desc">
+                                Se trata de un juego de terror inspirado en el famoso Five Nights at Freddy's.
+                            </p>
+                            <div class="project-card__links" aria-label="Enlaces del proyecto NightWatch">
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer" class="project-link-tag">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: GPUflow -->
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20203819.png"
+                                alt="Captura de pantalla del sistema GPUflow" width="320" height="200">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">GPUflow</h3>
+                            <p class="project-card__desc">
+                                Este es un sistema de gestión de stock para GPUs de PC.
+                            </p>
+                            <div class="project-card__links" aria-label="Enlaces del proyecto GPUflow">
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer" class="project-link-tag">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 4: GamerFest -->
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media">
+                            <img src="assets/icons/Captura%20de%20pantalla%202026-11-19%20205511.png"
+                                alt="Captura de pantalla de la plataforma GamerFest" width="320" height="200">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">GamerFest</h3>
+                            <p class="project-card__desc">
+                                Plataforma interactiva para la comunidad gamer.
+                            </p>
+                            <div class="project-card__links" aria-label="Enlaces del proyecto GamerFest">
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer" class="project-link-tag">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sub-bloque: Próximos Proyectos (presente en la pantalla Proyectos del prototipo) -->
+                <div class="section-header" style="margin-top: var(--space-lg);">
+                    <h3 class="section-title">Próximos Proyectos</h3>
+                    <p class="section-subtitle">Nuevos desarrollos en preparación</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media project-card__media--placeholder">
+                            <span class="project-card__placeholder-label">Próximamente</span>
+                            <span class="project-card__badge-box">En desarrollo</span>
+                        </div>
+                        <div class="project-card__body">
+                            <h4 class="project-card__title">Título del Proyecto</h4>
+                            <p class="project-card__desc">Breve resumen de lo que hace el proyecto.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media project-card__media--placeholder">
+                            <span class="project-card__placeholder-label">Próximamente</span>
+                            <span class="project-card__badge-box">En desarrollo</span>
+                        </div>
+                        <div class="project-card__body">
+                            <h4 class="project-card__title">Título del Proyecto</h4>
+                            <p class="project-card__desc">Breve resumen de lo que hace el proyecto.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media project-card__media--placeholder">
+                            <span class="project-card__placeholder-label">Próximamente</span>
+                            <span class="project-card__badge-box">En desarrollo</span>
+                        </div>
+                        <div class="project-card__body">
+                            <h4 class="project-card__title">Título del Proyecto</h4>
+                            <p class="project-card__desc">Breve resumen de lo que hace el proyecto.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal-item">
+                        <div class="project-card__media project-card__media--placeholder">
+                            <span class="project-card__placeholder-label">Próximamente</span>
+                            <span class="project-card__badge-box">En desarrollo</span>
+                        </div>
+                        <div class="project-card__body">
+                            <h4 class="project-card__title">Título del Proyecto</h4>
+                            <p class="project-card__desc">Breve resumen de lo que hace el proyecto.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           3. SECCIÓN RESEÑAS
+           ==================================================================== -->
+            <section id="resenas" class="section-block" aria-labelledby="titulo-resenas">
+                <div class="section-header">
+                    <h2 id="titulo-resenas" class="section-title">Reseñas</h2>
+                    <p class="section-subtitle">
+                        Comentarios sobre la implementación y uso de los sistemas desarrollados.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <article class="review-card reveal-item">
+                        <h3 class="review-card__client">Cliente 1 — ControlAR</h3>
+                        <p class="review-card__text">
+                            "El sistema nos facilitó por completo el control diario del inventario, las alertas de reposición y la consulta rápida de precios en mostrador."
+                        </p>
+                    </article>
+
+                    <article class="review-card reveal-item">
+                        <h3 class="review-card__client">Cliente 2 — GPUflow</h3>
+                        <p class="review-card__text">
+                            "Una herramienta muy clara e intuitiva para administrar el stock de placas de video, proveedores y alertas de unidades bajas en tiempo real."
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           4. SECCIÓN SOBRE MÍ (Biografía + Enlace Oficial a GitHub)
+           ==================================================================== -->
+            <section id="sobre-mi" class="section-block" aria-labelledby="titulo-sobre-mi">
+                <div class="section-header">
+                    <h2 id="titulo-sobre-mi" class="section-title">Sobre Mí</h2>
+                </div>
+
+                <div class="about-profile reveal-item">
+                    <div class="about-profile__avatar-wrap">
+                        <img src="assets/icons/WhatsApp%20Image%202026-11-20%20at%2013.54.47.jpeg"
+                            alt="Fotografía personal de Lucas Peralta" width="120" height="120">
+                    </div>
+
+                    <h3 class="about-profile__name">Lucas Peralta</h3>
+
+                    <p class="about-profile__bio">
+                        Hola, mi nombre es Lucas Peralta y soy Desarrollador de Software.
+                        Tengo 20 años y me gustan mucho los videojuegos y lo que tenga que ver con tecnología.
+                    </p>
+
+                    <!-- Icono de GitHub centrado como en la vista Sobre Mí de Figma -->
+                    <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer"
+                        class="about-profile__social"
+                        aria-label="Visitar perfil de GitHub de Lucas Peralta (se abre en una nueva pestaña)">
+                        <img src="assets/icons/images%20(4).png" alt="" width="28" height="28" aria-hidden="true">
+                        <span>github.com/lucasperalta10</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           5. SECCIÓN CONOCIMIENTOS (Categorizados con niveles confirmados)
+           ==================================================================== -->
+            <section id="conocimientos" class="section-block" aria-labelledby="titulo-conocimientos">
+                <div class="section-header">
+                    <h2 id="titulo-conocimientos" class="section-title">Mis Conocimientos</h2>
+                    <p class="section-subtitle">
+                        Tecnologías, lenguajes y herramientas de desarrollo organizados por categoría y nivel de dominio.
+                    </p>
+                </div>
+
+                <div class="skills-categories">
+                    <!-- Categoría 1: Lenguajes de Programación -->
+                    <div class="skill-category reveal-item">
+                        <h3 class="skill-category__title">Lenguajes de Programación</h3>
+                        <div class="skill-cards-grid">
+                            <article class="skill-card">
+                                <img src="assets/icons/images.png" alt="HTML5" class="skill-card__icon" width="48"
+                                    height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">HTML5</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★★</span>
+                                        <span class="skill-card__status">Avanzado</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/JavaScript-logo.png" alt="JavaScript" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">JavaScript</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★<span class="skill-card__stars-empty">★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/CSS3_logo_and_wordmark.svg.webp" alt="CSS3"
+                                    class="skill-card__icon" width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">CSS3</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★★</span>
+                                        <span class="skill-card__status">Avanzado</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/images%20(1).png" alt="Python" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">Python</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★<span class="skill-card__stars-empty">★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Frameworks y Tecnologías -->
+                    <div class="skill-category reveal-item">
+                        <h3 class="skill-category__title">Frameworks y Tecnologías</h3>
+                        <div class="skill-cards-grid">
+                            <article class="skill-card">
+                                <img src="assets/icons/images%20(2).png" alt="React Native" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">React Native</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★<span class="skill-card__stars-empty">★★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/images%20(3).png" alt="Node.js" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">Node.JS</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★<span class="skill-card__stars-empty">★★★</span></span>
+                                        <span class="skill-card__status">Básico</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/Vitejs-logo.svg.webp" alt="Vite" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">Vite</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★<span class="skill-card__stars-empty">★★★</span></span>
+                                        <span class="skill-card__status">Básico</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Base de datos -->
+                    <div class="skill-category reveal-item">
+                        <h3 class="skill-category__title">Base de datos</h3>
+                        <div class="skill-cards-grid">
+                            <article class="skill-card">
+                                <img src="assets/icons/2945040.webp" alt="MySQL" class="skill-card__icon" width="48"
+                                    height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">MySQL</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★<span class="skill-card__stars-empty">★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4: Herramientas de desarrollo -->
+                    <div class="skill-category reveal-item">
+                        <h3 class="skill-category__title">Herramientas de desarrollo</h3>
+                        <div class="skill-cards-grid">
+                            <article class="skill-card">
+                                <img src="assets/icons/a33f3f15417a2afd5441e9325fa9a546.jpg" alt="Git"
+                                    class="skill-card__icon" width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">Git</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★<span class="skill-card__stars-empty">★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/images%20(4).png" alt="GitHub" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">GitHub</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★<span class="skill-card__stars-empty">★</span></span>
+                                        <span class="skill-card__status">Intermedio</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/Visual_Studio_Code_1.35_icon.svg.webp" alt="VS Code"
+                                    class="skill-card__icon" width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">VS Code</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★★★★</span>
+                                        <span class="skill-card__status">Avanzado</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="skill-card">
+                                <img src="assets/icons/Figma-logo.svg.webp" alt="Figma" class="skill-card__icon"
+                                    width="48" height="48">
+                                <div class="skill-card__info">
+                                    <h4 class="skill-card__name">Figma</h4>
+                                    <div class="skill-card__level">
+                                        <span class="skill-card__stars" aria-hidden="true">★★<span class="skill-card__stars-empty">★★★</span></span>
+                                        <span class="skill-card__status">Básico</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           6. SECCIÓN EDUCACIÓN (Formación Académica y Cursos Confirmados)
+           ==================================================================== -->
+            <section id="educacion" class="section-block" aria-labelledby="titulo-educacion">
+                <div class="section-header">
+                    <h2 id="titulo-educacion" class="section-title">Educación</h2>
+                    <p class="section-subtitle">
+                        Formación académica superior, educación secundaria y cursos de especialización.
+                    </p>
+                </div>
+
+                <div class="education-grid">
+                    <article class="education-card reveal-item">
+                        <h3 class="education-card__title">Formación Académica</h3>
+                        <ul class="education-card__list">
+                            <li>
+                                <strong>Instituto Superior de Formación Docente y Técnica Nº26 (Dolores):</strong>
+                                Tecnicatura en Desarrollo de Software — 2do año (En curso).
+                            </li>
+                            <li>
+                                <strong>Escuela Secundaria Nº1 (Castelli):</strong>
+                                Educación Secundaria (Completo).
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="education-card reveal-item">
+                        <h3 class="education-card__title">Cursos y Certificaciones</h3>
+                        <ul class="education-card__list">
+                            <li>
+                                <strong>Desarrollo Web Full Stack JR:</strong>
+                                Generación T — Streambe.
+                            </li>
+                            <li>
+                                <strong>Inglés (Nivel B2):</strong>
+                                SELT.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ====================================================================
+           7. SECCIÓN CONTACTO Y FORMULARIO ACCESIBLE
+           ==================================================================== -->
+            <section id="contacto" class="section-block" aria-labelledby="titulo-contacto">
+                <div class="section-header">
+                    <h2 id="titulo-contacto" class="section-title">Contacto</h2>
+                    <p class="section-subtitle">
+                        Canales de comunicación y formulario preparado para integración estática en GitHub Pages.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Canales Directos -->
+                    <div class="contact-info-card reveal-item">
+                        <h3 class="contact-info-card__title">Canales Directos</h3>
+                        <p class="section-subtitle">
+                            Podés encontrar mis repositorios en GitHub o enviarme una consulta mediante el formulario:
+                        </p>
+
+                        <div class="contact-channels">
+                            <div class="contact-channel-item">
+                                <span class="contact-channel-item__label">Perfil de GitHub</span>
+                                <a href="https://github.com/lucasperalta10" target="_blank" rel="noopener noreferrer"
+                                    class="contact-channel-item__value"
+                                    style="color: var(--color-accent); text-decoration: underline;">
+                                    https://github.com/lucasperalta10
+                                </a>
+                            </div>
+
+                            <div class="contact-channel-item">
+                                <span class="contact-channel-item__label">Correo Electrónico</span>
+                                <a href="mailto:lucas.peraltaa25@gmail.com"
+                                    class="contact-channel-item__value"
+                                    style="color: var(--color-accent); text-decoration: underline;">
+                                    lucas.peraltaa25@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-card reveal-item">
+                        <h3 class="contact-info-card__title">Envíame un Mensaje</h3>
+
+                        <form id="contact-form" class="contact-form" data-recipient-email="lucas.peraltaa25@gmail.com"
+                            novalidate>
+                            <div class="form-group">
+                                <label for="contacto-nombre" class="form-label">
+                                    <span>Nombre *</span>
+                                </label>
+                                <input type="text" id="contacto-nombre" name="nombre" class="form-control"
+                                    placeholder="Tu nombre completo" autocomplete="name" required
+                                    aria-describedby="error-nombre">
+                                <span id="error-nombre" class="form-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-correo" class="form-label">
+                                    <span>Correo electrónico *</span>
+                                </label>
+                                <input type="email" id="contacto-correo" name="correo" class="form-control"
+                                    placeholder="tucorreo@ejemplo.com" autocomplete="email" required
+                                    aria-describedby="error-correo">
+                                <span id="error-correo" class="form-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-asunto" class="form-label">
+                                    <span>Asunto</span>
+                                    <span class="form-label__optional">(Opcional)</span>
+                                </label>
+                                <input type="text" id="contacto-asunto" name="asunto" class="form-control"
+                                    placeholder="Motivo del mensaje">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-mensaje" class="form-label">
+                                    <span>Mensaje *</span>
+                                </label>
+                                <textarea id="contacto-mensaje" name="mensaje" class="form-control"
+                                    placeholder="Escribí tu consulta o propuesta..." required
+                                    aria-describedby="error-mensaje"></textarea>
+                                <span id="error-mensaje" class="form-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+                            <button type="submit" class="btn btn--primary">
+                                Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p><strong>Lucas Peralta</strong> — Desarrollador de Software</p>
+            <p>Sitio estático desarrollado con HTML5, CSS3 y JavaScript Vanilla. Compatible con GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

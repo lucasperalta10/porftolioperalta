@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Marcador de foto de perfil de Lucas Peralta">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#231C3A"/>
+      <stop offset="100%" stop-color="#191525"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="60" fill="url(#bgGrad)"/>
+  <circle cx="60" cy="44" r="20" fill="#8B5CF6" opacity="0.85"/>
+  <path d="M24 106 C24 82, 96 82, 96 106 Z" fill="#8B5CF6" opacity="0.65"/>
+  <text x="60" y="50" text-anchor="middle" fill="#EAE7F2" font-family="sans-serif" font-size="14" font-weight="bold">LP</text>
+</svg>
