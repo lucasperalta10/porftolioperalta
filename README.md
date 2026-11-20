@@ -82,11 +82,11 @@ Definido mediante variables CSS en `:root` (`css/styles.css`):
   - **Avanzado:** `HTML5`, `CSS3`, `VS Code`.
   - **Intermedio:** `JavaScript`, `Python`, `React Native`, `MySQL`, `Git`, `GitHub`.
   - **Básico:** `Vite`, `Node.JS`, `Figma`.
-- [x] **Capturas reales de Proyectos Destacados y Logo:**
-  - **ControlAR:** `Captura de pantalla 2026-11-19 201051.png` + logo `ControlARimagen.png`.
+- [x] **Capturas reales de Proyectos Destacados, Logo y Repositorios:**
+  - **ControlAR:** `Captura de pantalla 2026-11-19 201051.png` + logo `ControlARimagen.png` + repositorio (`https://github.com/lucasperalta10/ControlARsistema`).
   - **NightWatch:** `Captura de pantalla 2026-11-19 204404.png`.
   - **GPUflow:** `Captura de pantalla 2026-11-19 203819.png`.
-  - **GamerFest:** `Captura de pantalla 2026-11-19 205511.png`.
+  - **GamerFest:** `Captura de pantalla 2026-11-19 205511.png` + repositorio (`https://github.com/lucasperalta10/GamerFest`).
 - [x] **Educación y Cursos:**
   - *Formación Académica:* Instituto Superior de Formación Docente y Técnica Nº26 Dolores (Tecnicatura en Desarrollo de Software, 2do año, en curso) y Escuela Secundaria Nº1 Castelli (Completo).
   - *Cursos:* Desarrollo Web Full Stack JR (Generación T, Streambe) e Inglés — Nivel B2 (SELT).
