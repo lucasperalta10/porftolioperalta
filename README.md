@@ -84,7 +84,7 @@ Definido mediante variables CSS en `:root` (`css/styles.css`):
   - **Básico:** `Vite`, `Node.JS`, `Figma`.
 - [x] **Capturas reales de Proyectos Destacados, Logo y Repositorios:**
   - **ControlAR:** `Captura de pantalla 2026-11-19 201051.png` + logo `ControlARimagen.png` + repositorio (`https://github.com/lucasperalta10/ControlARsistema`).
-  - **NightWatch:** `Captura de pantalla 2026-11-19 204404.png`.
+  - **NightWatch:** `Captura de pantalla 2026-11-19 204404.png` + repositorio (`https://github.com/lucasperalta10/NightWatchJuego`).
   - **GPUflow:** `Captura de pantalla 2026-11-19 203819.png` + repositorio (`https://github.com/lucasperalta10/GPUflowRenovado`).
   - **GamerFest:** `Captura de pantalla 2026-11-19 205511.png` + repositorio (`https://github.com/lucasperalta10/GamerFest`).
 - [x] **Educación y Cursos:**
