@@ -1,19 +1,5 @@
 /* ==========================================================================
    Portfolio Personal — Lucas Peralta
-   Hoja de estilos principal modularizada según Atomic Design
+   Los módulos CSS (Atomic Design) se vinculan directamente desde el HTML
+   para evitar peticiones encadenadas con @import y problemas de caché.
    ========================================================================== */
-
-/* 1. ÁTOMOS (Tokens, Base y Componentes Básicos) */
-@import url('atoms/variables.css');
-@import url('atoms/base.css');
-@import url('atoms/buttons-tags.css');
-
-/* 2. MOLÉCULAS (Unidades funcionales simples) */
-@import url('molecules/cards.css');
-
-/* 3. ORGANISMOS (Secciones complejas y bloques funcionales) */
-@import url('organisms/sections.css');
-@import url('organisms/terminal.css');
-
-/* 4. PLANTILLAS Y PÁGINAS (Layout general y responsive de escritorio) */
-@import url('templates/layout.css');
