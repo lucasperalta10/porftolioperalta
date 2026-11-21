@@ -98,6 +98,13 @@
     ls: function () {
       appendLine('index.html   proyectos.html   README.md   secretos/', 'system');
     },
+    tf2: function () {
+      appendLine('Engineer: "¡Hay que mover el cacharro!" 🔧🤠', 'system');
+      const sound = new Audio('assets/sounds/hay-que-mover-el-cacharroo.mp3');
+      sound.play().catch(function (error) {
+        console.warn('Error al reproducir audio de TF2:', error);
+      });
+    },
     clear: function () {
       terminalOutput.innerHTML = '';
     },
